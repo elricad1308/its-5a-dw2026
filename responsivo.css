@@ -1,0 +1,50 @@
+body {
+    font-size: 2rem;
+    color: white;
+}
+
+.miniatura {
+    min-height: 200px;
+}
+
+.verde {
+    background-color: forestgreen;
+    flex: 9;
+    flex-basis: 300px;
+    flex-shrink: 1;
+    flex-grow: 3;
+}
+
+.rojo {
+    background-color: firebrick;
+    flex: 2;
+    flex-basis: 300px;
+    flex-shrink: 2;
+    flex-grow: 1;
+}
+
+.morado {
+    background-color: rebeccapurple;
+    flex: 1;
+    flex-basis: 300px;
+    flex-shrink: 3;
+    flex-grow: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* media query */ 
+@media screen and (min-width: 1000px) {
+    .container {
+        flex-direction: row;
+    }
+} 
+
+@media print {
+    .rojo, .verde, .morado {
+        background-color: gray;
+    }
+}

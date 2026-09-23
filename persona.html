@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="https://fi.jcaguilar.dev/v1/escuela/persona" method="post">
+  <h1> Registro Persona </h1>
+    Nombre:
+  <input id="nombre" min="0" max="64" name="nombre" type="text"><br>
+    Apellido:
+    <input id="apellido" min="0" max="64" name="apellido" type="text"><br>
+    Sexo:
+    <input id="sexo-h" type="radio" name="sexo" value="h"><label for="sexo-h">Masculino</label>
+    <input id="sexo-m" type="radio" name="sexo" value="m"><label for="sexo-m">Femenino</label>
+    <input id="sexo-o" type="radio" name="sexo" value="o"><label for="sexo-o">Otro</label><br>
+    Fecha de Nacimiento:
+    <input id="fh_nac" type="date" name="fh_nac"><br>
+
+    <label for="id_rol">Rol:</label>
+    <select id="id_rol" class="form-control" name="id_rol">
+      <option value="1" >Alumno</option>
+      <option value="2" >Profesor</option>
+      <option value="3">Administrativo</option>
+      <option value="4">Otro</option>
+    </select><br>
+
+    <input type="submit" value="Registrar">
+    <h1>Hola</h1>
+  </form>
+</body>
+</html>

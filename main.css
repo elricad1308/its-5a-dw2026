@@ -1,0 +1,64 @@
+/* Selector de ID */
+#manolo {
+    background-color: goldenrod;
+}
+
+
+
+
+/* Regla */
+label /* Selector */ {
+    color: red; /* Declaraciones */
+    /* Propiedad */ font-weight: 100; /* Valor */
+    font-size: 6rem;
+    font-family: "Times New Roman", "Comic Sans MS", Arial, Helvetica, sans-serif;
+}
+
+/* Selector de elemento */
+span {
+    background-color: red ;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+/* Selector de clase */
+.verde {
+    background-color: green;
+    height: 100px;
+    width: 100px;
+}
+
+.azul {
+    background-color: #207c8a;
+}
+
+img {
+    background-color: cyan;
+    border: 50px double fuchsia;
+    width: 200px;
+}
+
+/* Selector descendiente */
+div p, 
+span p {
+    color: #20818a;
+    font-size: 34px;
+    display: block;
+}
+
+/* Selector hermano */
+div + span {
+    display: block;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+

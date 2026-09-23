@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <form
+      action="#"
+      method="post">
+    <h1>Formulario de pago</h1>
+    Número de tarjeta:
+    <input><br>
+    CVV:
+    <input 
+      min="0"
+      max="999"
+      name="numero-magico"
+      type="number"><br>
+    Fecha de vencimiento:
+    <input type="month"><br>
+    Nombre del titular:
+    <input type="text">
+    <br>
+    Tipo de tarjeta:
+    <input 
+      id="tipo-visa" 
+      name="tipo" 
+      type="radio"
+      value="visa">
+    <label for="tipo-visa">Visa</label>
+    <input 
+      id="tipo-master" 
+      name="tipo" 
+      type="radio"
+      value="mastercard">
+    <label for="tipo-master">MasterCard</label>
+    <input 
+      id="tipo-amex" 
+      name="tipo" 
+      type="radio"
+      value="amex">
+    <label for="tipo-amex">American Express</label>
+    <br>
+
+    <label for="estado">
+      Estado
+    </label>
+    <select
+     id="estado"
+     class="form-control">
+        <option>Aguascalientes</option>
+        <option>Campeche</option>
+        <option>Yucatán</option>
+        <option>Tabasco</option>
+        <option>Quintana Roo</option>
+    </select>
+    <br>
+
+    <input
+      id="consentimiento"
+      type="checkbox">
+    <label for="consentimiento">
+    Acepto que se realice el cargo a mi tarjeta
+    </label>
+    <br>
+
+    <label for="correo">
+      Correo
+    </label>
+    <input 
+      id="correo"
+      type="email">
+    <br>
+    <label for="contrasena">
+      Contraseña
+    </label>
+    <input 
+      type="password" 
+      name="contrasena" 
+      id="contrasena">
+      <br>
+
+    <label 
+      for="telefono" 
+      class="una clase mas">
+      Teléfono
+    </label>
+    <input 
+    type="tel" 
+    name="" 
+    id="telefono">
+    <br>
+
+    <label for="favorito">
+      Color favorito:
+    </label>
+    <input 
+      type="color" 
+      name="" 
+      id="favorito">
+    <br>
+    <label for="volumen">
+      Volumen
+    </label>
+    <input 
+      type="range" 
+      name="" 
+      id="volumen">
+
+      <br>
+      <label for="comprobante">
+        Comprobante de pago
+      </label>
+      <input
+       accept=".png"
+       type="file" 
+       name="" 
+       id="comprobante">
+
+      <label for="perfil">
+        Foto de perfil:
+      </label>
+      <input 
+        type="image" 
+        src="" alt=""
+        id="perfil">
+        <br>
+
+    <input type="submit" value="Enviar datos">
+    <input type="reset" value="Limpiar formulario">
+    <input type="button" value="Botón genérico">
+    </form>
+</body>
+</html>
