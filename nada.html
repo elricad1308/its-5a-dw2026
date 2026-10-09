@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const jose = 'Jose Aguilar'
+        document.querySelector('body')
+          .innerHTML = /*html*/ 
+            `<button id="roberto" class="boton-rojo">
+                Presioname
+            </button>
+            <img>`
+        document.getElementById('roberto')
+          .addEventListener('click', function () {
+            document.querySelector('img')
+              .src = 'https://scontent.fmid2-1.fna.fbcdn.net/v/t39.30808-6/495869874_1254438333354664_6220561938679639767_n.jpg?stp=dst-jpg_tt6&cstp=mx720x726&ctp=s720x726&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG_f7pTQQ9MxEIX5P2u-Zszhgim2Pv_IE2GCKbY-_8gTZPa6oKUJVfeEVXOykslkmJAWDqtTrJzv9MY74vqi4JE&_nc_ohc=KuGnaWXmOBcQ7kNvwF0qXGQ&_nc_oc=Adp4Hdf4G5lzFBR3UlbuF5fAdUBwLhPiiBfa3JgceEkRrnyyqx51xuAYpbqurPFi_H0&_nc_zt=23&_nc_ht=scontent.fmid2-1.fna&_nc_gid=g4pyiVVH2CW2mJBfFSONgQ&_nc_ss=7a2a8&oh=00_AQNJIZRuN0tNy6UdzEQzSK4wqgH3OVgtfEO4lvjOFZOqaQ&oe=6ACF15E7'
+          })
+
+        const css = document.createElement('link')
+        css.href = 'main.css'
+        css.rel = 'stylesheet'
+        document.querySelector('body')
+          .append(css)
+    </script>
+</body>
+</html>

@@ -54,7 +54,9 @@ div + span {
     width: 100%;
 }
 
-
+.borroso {
+    filter: blur(2rem);
+}
 
 
 
