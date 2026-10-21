@@ -11,10 +11,10 @@
     <form class="container">
         <div class="row">
         <label for="matricula">
-            Matrícula:
+            Pokémon:
         </label>
         <input 
-          type="number" 
+          type="text" 
           name="matricula" 
           id="matricula">
         </div>
@@ -48,7 +48,10 @@
             <button type="button" class="btn-close" data-bs-dismiss="dialog"></button>
         </div>
 
-        <div class="dialog-body"></div>
+        <div class="dialog-body">
+            <h1 id="poke-title"></h1>
+            <img id="poke-img">
+        </div>
 
         <div class="dialog-footer">
             <button type="button" class="btn-solid theme-primary" data-bs-dismiss="dialog">
@@ -57,6 +60,7 @@
         </div>
     </dialog>
 
+    <script type="module" src="util.js"></script>
     <script type="module" src="miercoles.js"></script>
 </body>
 </html>
