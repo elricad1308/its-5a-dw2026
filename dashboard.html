@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poké dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-4 offset-8 md:col-1 md:offset-11">
+                <button id="btn-agregar" class="button theme-primary btn-solid btn-styled">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                    </svg>
+                    Agregar
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+
+                <table class="table table-striped table-hover mt-5">
+                    <thead>
+                        <tr>
+                            <th>Número</th>
+                            <th>Nombre</th>
+                            <th>Sprite</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <th>Número</th>
+                            <th>Nombre</th>
+                            <th>Sprite</th>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    
+    <dialog class="dialog" id="form-dialog">
+        <div class="dialog-header">
+            <h1 class="dialog-title">Formulario</h1>
+            <button type="button" data-bs-dismiss="dialog" aria-label="Cerrar" class="btn-close"></button>
+        </div>
+
+        <div class="dialog-body">
+            <div class="form-field">
+                <label for="inp-search" class="form-label">
+                    Buscar:
+                </label>
+                <input type="text" id="inp-search" class="form-control" placeholder="Buscar por nombre o número">
+            </div>
+        </div>
+
+        <div class="dialog-footer">
+            <button class="btn-solid theme-secondary" data-bs-dismiss="dialog">
+                Cancelar
+            </button>
+            <button class="btn-solid theme-primary" id="btn-buscar">
+                Buscar
+            </button>
+        </div>
+    </dialog>
+    <script src="dashboard.js"></script>
+</body>
+</html>
