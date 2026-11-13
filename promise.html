@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="cumplir">Cumplir</button>
+    <button id="rechazar">Rechazar</button>
+    <script>
+        let cumplirPromesa
+        let rechazarPromesa
+
+        let miPromesa = new Promise((resolve, reject) => {
+            cumplirPromesa = resolve
+            rechazarPromesa = reject
+        })
+
+        // Ejecuta la función tan pronto el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('#cumplir')
+              .addEventListener('click', () => {
+                cumplirPromesa({
+                    nombre: 'Jose',
+                    apellido: 'Aguilar',
+                    edad: 35,
+                    correo: 'jcaguilc@uacam.mx'
+                })
+            })
+
+            document.querySelector('#rechazar')
+              .addEventListener('click', () => {
+                rechazarPromesa('porque la vi con otro')
+            })
+        })
+    </script>
+</body>
+</html>

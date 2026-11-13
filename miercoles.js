@@ -57,11 +57,71 @@ function guardar (evt) {
         console.log(datos)
         document.querySelector("#poke-title").innerHTML = datos.name
         document.querySelector("#poke-img").src = datos.sprites.front_default
+        document.querySelector('#poke-sound').src = datos.cries.latest
+        document.querySelector('#poke-sound').play()
+
+        return fetch(datos.species.url)
+    })
+    .then(response2 => {
+        return response2.json()
+    })
+    .then(datos2 => {
+        document.querySelector('#entry').innerHTML = ''
+
+        for (let entry of datos2.flavor_text_entries) {
+            if (entry.language.name.startsWith('es')) {
+                document.querySelector('#entry')
+                .innerHTML += entry.flavor_text + '<br>'
+            }
+        }
+
+        const dialog = new bootstrap.Dialog('#dialog')
+        dialog.show()
+    })
+    .catch(reason => {
+        console.error(`La promesa no se cumplió porque ${reason}`)
     })
 
     const dialog = new bootstrap.Dialog('#dialog')
     dialog.show()
 }
+
+// azúcar sintáctico async / await
+async function buscar () {
+    evt.preventDefault()
+
+    try {
+        // Primer paso obtener la entrada del usuario
+        let poke = document.querySelector('#matricula').value
+        
+        // Segundo paso: lanzar una solicitud asíncrona
+        let respuesta = await fetch(POKEAPI_URL + poke)
+        let datos = await respuesta.json()
+
+        document.querySelector("#poke-title").innerHTML = datos.name
+        document.querySelector("#poke-img").src = datos.sprites.front_default
+        document.querySelector('#poke-sound').src = datos.cries.latest
+        document.querySelector('#poke-sound').play()
+
+        let respuesta2 = await fetch(datos.species.url)
+        let datos2 = await respuesta2.json()
+
+        document.querySelector('#entry').innerHTML = ''
+
+        for (let entry of datos2.flavor_text_entries) {
+            if (entry.language.name.startsWith('es')) {
+                document.querySelector('#entry')
+                .innerHTML += entry.flavor_text + '<br>'
+            }
+        }
+
+        const dialog = new bootstrap.Dialog('#dialog')
+        dialog.show()
+    } catch (reason) {
+        console.error(`La promesa no se cumplió porque ${reason}`)
+    }
+}
+
 
 function cancelar (evt) {
     evt.preventDefault()
@@ -76,9 +136,13 @@ function cancelar (evt) {
         console.log(datos.message)
         document.querySelector('#poke-img').src = datos.message
         document.querySelector('#poke-img').style.display = 'inline-block'
-        const dialog = new bootstrap.Dialog('#dialog')
-        dialog.show()
+        
+        console.log('fetching')
+        
+        
     })
+    
+    .catch(reason => console.error(reason))
 
     
 }
